@@ -59,6 +59,7 @@ let fullName = [];
 fullName = runners.map(function(currentValue){
     return `${currentValue.first_name} ${currentValue.last_name}`;
 });
+
 console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
@@ -67,16 +68,27 @@ let allCaps = [];
 allCaps = runners.map(function(currentValue){
     return currentValue.first_name.toUpperCase();
 });
+
 console.log(allCaps); 
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
 let largeShirts = [];
+largeShirts = runners.filter(function(currentValue){
+    return currentValue.shirt_size === "L";
+});
+
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
 let ticketPriceTotal = [];
+ticketPriceTotal = runners.reduce(function(runningTotal, currentValue){
+    console.log(`accumulator: ${runningTotal}`);
+    console.log(`currentValue: ${currentValue}`);
+    return runningTotal + currentValue.donation;
+}, 0);
+
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
