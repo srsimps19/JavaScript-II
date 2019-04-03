@@ -1,6 +1,27 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function GoT() {
+  const khaleesi = "I am the Mother of Dragons!";
+  console.log(`Daenerys Targaryen: ${khaleesi}`);
+  debugger;
+
+  function theWall() {
+    const jonSnow = "I fight for Castle Black!";
+    console.log(`At the wall: ${jonSnow}`);
+    debugger;
+
+    function westeros() {
+      const tyrionLannister = "It’s hard to put a leash on a dog once you’ve put a crown on its head.";
+      console.log(`To Cersei, about Joffery's bad behavior: ${tyrionLannister}`);
+      debugger;
+    }
+    westeros();
+  }
+  theWall();
+}
+GoT();
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
